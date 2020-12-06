@@ -7,7 +7,7 @@ class SkewCorrection():
         super().__init__()
 
     def getValue(self, command, line):
-        r = re.search(command + r'\d+(\.\d+)?', line)
+        r = re.search(command + r'-?\d+(\.\d+)?', line)
         if( r == None ):
             return None
         else:
